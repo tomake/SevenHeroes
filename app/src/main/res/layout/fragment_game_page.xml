@@ -1,0 +1,438 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/content_bg"
+              android:orientation="vertical"
+              tools:context="com.sevenheroes.fragment.MainPageFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/topbar"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/ibDrawerToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/btn_drawer_selector"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="center"
+            android:src="@drawable/logo_title"/>
+
+        <ImageButton
+            android:id="@+id/ibPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="center"
+            android:src="@drawable/btn_pay_selector"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/content_deep_bg"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/ivHeadImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/user1_17"/>
+
+        <ImageView
+            android:id="@+id/ivCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/ivHeadImage"
+            android:layout_alignTop="@+id/ivHeadImage"
+            android:src="@drawable/country2"/>
+
+        <Button
+            android:id="@+id/btnUpgrade"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/ivHeadImage"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_upgrade_selector"
+            android:gravity="center"
+            android:text="@string/upgrade"
+            android:textColor="@color/yellow"
+            android:textSize="12sp"/>
+
+        <ProgressBar
+            android:id="@+id/bpUpgradeProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnUpgrade"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnUpgrade"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btnUpgrade"
+            android:background="@drawable/progress_bg"
+            android:progressDrawable="@drawable/horizontal_progress_bg"
+            android:max="100"
+            android:progress="60"
+            android:indeterminate="false"/>
+
+        <TextView
+            android:id="@+id/tvTicket"
+            style="@style/MainTextViewStyle"
+            android:layout_alignBottom="@+id/ivHeadImage"
+            android:layout_alignLeft="@+id/bpUpgradeProgress"
+            android:layout_alignStart="@+id/bpUpgradeProgress"
+            android:drawableLeft="@drawable/tick"
+            android:text="@string/virtual_count"
+            />
+
+        <TextView
+            android:id="@+id/tvMoney"
+            style="@style/MainTextViewStyle"
+            android:layout_alignBottom="@+id/tvTicket"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/tvTicket"
+            android:layout_toRightOf="@+id/tvTicket"
+            android:drawableLeft="@drawable/gold"
+            android:drawablePadding="5dp"
+            android:text="@string/virtual_count"/>
+
+        <TextView
+            android:id="@+id/tvExperience"
+            style="@style/MainTextViewStyle"
+            android:layout_above="@+id/tvTicket"
+            android:layout_alignLeft="@+id/tvTicket"
+            android:layout_marginBottom="10dp"
+            android:text="@string/experience"/>
+
+        <TextView
+            android:id="@+id/tvRoleName"
+            style="@style/MainTextViewStyle"
+            android:layout_above="@+id/tvExperience"
+            android:layout_alignLeft="@+id/tvExperience"
+            android:layout_marginBottom="10dp"
+            android:text="@string/role_name"/>
+
+        <TextView
+            android:id="@+id/tvLevel"
+            style="@style/MainTextViewStyle"
+            android:layout_alignBottom="@+id/tvRoleName"
+            android:layout_alignLeft="@+id/tvMoney"
+            android:layout_marginLeft="20dp"
+            android:text="@string/level"
+            android:textColor="@color/yellow"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp">
+
+        <TextView
+            android:id="@+id/tvFood"
+            style="@style/PossessionTextViewStyle"
+            android:drawableLeft="@drawable/food"/>
+
+        <TextView
+            android:id="@+id/tvWood"
+            style="@style/PossessionTextViewStyle"
+            android:drawableLeft="@drawable/wood"/>
+
+        <TextView
+            android:id="@+id/tvStone"
+            style="@style/PossessionTextViewStyle"
+            android:drawableLeft="@drawable/stone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp">
+
+
+        <TextView
+            android:id="@+id/tvJewel"
+            style="@style/PossessionTextViewStyle"
+            android:drawableLeft="@drawable/bronze"/>
+
+        <TextView
+            android:id="@+id/tvSlave"
+            style="@style/PossessionTextViewStyle"
+            android:drawableLeft="@drawable/people"/>
+
+        <TextView
+            android:id="@+id/tvCopper"
+            style="@style/PossessionTextViewStyle"
+            android:drawableLeft="@drawable/copper"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <!-- First Column -->
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                >
+
+                <!-- Gift -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibGift"
+                    android:src="@drawable/btn_gift_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvGift"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/gift"
+
+                    />
+
+                <!-- PVP -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibPVP"
+                    android:src="@drawable/btn_pvp_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvPVP"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/pvp"
+                    />
+
+                <!-- Fighting -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibFighting"
+                    android:src="@drawable/btn_fighting_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvFighting"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/fighting"
+                    />
+
+                <!-- Farm -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibFarm"
+                    android:src="@drawable/btn_farm_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvFarm"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/farm"
+                    />
+
+                <!-- School -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibSchool"
+                    android:src="@drawable/btn_school_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvSchool"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/school"
+                    />
+
+                <!-- Hospital -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibHospital"
+                    android:src="@drawable/btn_hospital_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvHospital"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/hospital"
+                    />
+
+            </LinearLayout>
+
+
+            <!-- Second Column -->
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- Floor -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibFloor"
+                    android:src="@drawable/btn_floor_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvFloor"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/floor"
+                    />
+
+                <!-- PVE -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibPVE"
+                    android:src="@drawable/btn_pve_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvPVE"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/pve"
+                    />
+
+                <!-- Union -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibUnion"
+                    android:src="@drawable/btn_union_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvUnion"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/union"
+                    />
+
+                <!-- Camp -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibCamp"
+                    android:src="@drawable/btn_camp_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvCamp"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/camp"
+                    />
+
+                <!--  Task -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibTask"
+                    android:src="@drawable/btn_task_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvTask"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/task"
+                    />
+
+            </LinearLayout>
+
+
+            <!--  Third Column-->
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- Training -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibTraining"
+                    android:src="@drawable/btn_training_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvTraining"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/training_home"
+                    />
+
+                <!-- Government -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibGovern"
+                    android:src="@drawable/btn_govern_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvGovern"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/government"
+                    />
+
+                <!-- Soldier -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibSoldier"
+                    android:src="@drawable/btn_soldier_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvSoldier"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/soldier"
+                    />
+
+                <!-- BuildingManagement-->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibBuildingManagement"
+                    android:src="@drawable/btn_building_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvBuilding"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/building_management"
+                    />
+
+                <!-- Bar -->
+                <ImageButton
+                    style="@style/ImageButtonStyle"
+                    android:id="@+id/ibBar"
+                    android:src="@drawable/btn_bar_selector"
+                    />
+                <TextView
+                    android:id="@+id/tvBar"
+                    style="@style/FunctionTextViewStyle"
+                    android:text="@string/bar"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

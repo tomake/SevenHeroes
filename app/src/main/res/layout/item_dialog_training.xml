@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="3dp"
+              android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvName"
+        android:layout_weight="1"
+        style="@style/MainTextViewStyle"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvExperienceAmount"
+        android:layout_weight="1"
+        style="@style/MainTextViewStyle"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvConsumeMoney"
+        android:layout_weight="1"
+        style="@style/MainTextViewStyle"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/change"
+        android:id="@+id/btnChangeAmount"
+        style="@style/CommonButtonStyle"
+        android:layout_weight="1"
+        android:enabled="false"
+        android:textColor="@color/content_bg"
+        />
+</LinearLayout>

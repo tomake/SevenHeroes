@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:dividerHeight="0.5dp"
+        android:divider="@color/black"
+        android:background="@color/content_bg"
+        android:id="@+id/lvTraining"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="15dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSelectAll"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/all_selected"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancelAll"
+            android:layout_alignTop="@+id/btnSelectAll"
+            android:layout_toRightOf="@+id/btnSelectAll"
+            android:layout_toEndOf="@+id/btnSelectAll"
+            android:text="@string/all_cancel"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNormalTraining"
+            android:layout_below="@+id/btnSelectAll"
+            android:layout_alignLeft="@+id/btnSelectAll"
+            android:layout_alignStart="@+id/btnSelectAll"
+            android:text="@string/normal_training"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAdvanceTraining"
+            android:layout_alignTop="@+id/btnNormalTraining"
+            android:layout_alignLeft="@+id/btnCancelAll"
+            android:layout_alignStart="@+id/btnCancelAll"
+            android:text="@string/advance_training"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stop_training"
+            android:id="@+id/btnStopTraining"
+            android:layout_above="@+id/btnAdvanceTraining"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/training_tips"
+            android:id="@+id/tvTrainingTips"
+            android:layout_alignTop="@+id/btnCancelAll"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="10dp"/>
+    </RelativeLayout>
+</LinearLayout>

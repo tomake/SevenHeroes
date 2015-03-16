@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rlRoleTraning"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_bg">
+
+    <CheckBox
+        android:id="@+id/cbTraining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:checked="false"/>
+
+    <TextView
+        android:id="@+id/tvRoleName"
+        style="@style/MainTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/cbTraining"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:id="@+id/tvLevel"
+        style="@style/MainTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvRoleName"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/tvRoleName"
+        android:layout_toRightOf="@+id/tvRoleName"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/tvRoleState"
+        style="@style/MainTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvLevel"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_toEndOf="@+id/tvLevel"
+        android:layout_toRightOf="@+id/tvLevel"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/tvLeftTime"
+        style="@style/MainTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvRoleName"
+        android:layout_below="@+id/tvRoleName"
+        android:text="234234"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/tvGottenExperience"
+        style="@style/MainTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvLeftTime"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tvLeftTime"
+        android:textSize="10sp"/>
+</RelativeLayout>
