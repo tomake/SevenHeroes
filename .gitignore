@@ -1,6 +1,20 @@
+# gradle building files
 .gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+
+# some suggest to remain .idea and ignore /.idea/libraies , /.idea/workspace.xml
+.idea
+
+# directorys' display property file
 .DS_Store
+
+# auto generate files
 /build
+
+# local properties file
+/local.properties
+
+# others
+*.ipr
+*.iws
+*.swp
+*~

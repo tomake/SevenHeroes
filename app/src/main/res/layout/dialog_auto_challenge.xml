@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/dialog_bg"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <TextView
+        style="@style/MainTextViewStyle"
+        android:text="@string/auto_help_tips"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        style="@style/MainTextViewStyle"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/auto_treat_boss"
+        android:textSize="10sp"/>
+
+    <TextView
+        style="@style/MainTextViewStyle"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/auto_fit_soldier"
+        android:textSize="10sp"/>
+
+    <TextView
+        style="@style/MainTextViewStyle"
+        android:layout_marginTop="20dp"
+        android:text="@string/auto_stop"
+        android:textSize="10sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/MainTextViewStyle"
+            android:text="@string/fight_to"
+            android:textSize="10sp"
+            />
+
+        <EditText
+            android:id="@+id/etAutoFightingLevel"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:text="@string/init_level"
+            android:inputType="number"
+            android:numeric="integer"
+            android:cursorVisible="false"/>
+
+        <TextView
+            style="@style/MainTextViewStyle"
+            android:text="@string/level_stop"
+            android:textSize="10sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:maxEms="15"
+        android:text="@string/auto_help_warning"
+        android:textColor="@color/red"
+        android:textSize="10sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnStart"
+            style="@style/CommonButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/start"/>
+
+        <Button
+            android:id="@+id/btnExit"
+            style="@style/CommonButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/exit"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:background="@color/content_deep_bg"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/llChooseLeader"
+              >
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cbChooseLeader"
+        android:checked="false"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="@string/default_order"
+        android:id="@+id/tvOrderNum"/>
+    <View android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/content_bg" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="@string/leader_name"
+        android:id="@+id/tvLeaderName"/>
+    <View android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:background="@color/content_bg" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="@string/default_amount"
+        android:id="@+id/tvHealthAmount"/>
+    <View android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:background="@color/content_bg" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="@string/default_job"
+        android:id="@+id/tvJob"/>
+    <View android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:background="@color/content_bg" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="@string/default_order"
+        android:id="@+id/tvBossLevel"/>
+    <View android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:background="@color/content_bg" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="@string/soldier_foot"
+        android:id="@+id/tvSoldierType"/>
+    <View android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:background="@color/content_bg" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="@string/default_amount"
+        android:id="@+id/tvTakeSoldierAmount"/>
+    <View android:layout_width="1dp"
+          android:layout_height="match_parent"
+          android:background="@color/content_bg" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:text="@string/default_state"
+        android:id="@+id/tvLeaderState"/>
+</LinearLayout>

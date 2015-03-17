@@ -211,7 +211,7 @@ public class LoginActivity extends Activity implements View.OnClickListener , Te
         public View getView(final int position, View convertView, ViewGroup parent) {
             ViewHolder viewHolder;
             if(convertView == null){
-                convertView = mInflater.inflate(R.layout.list_account , null);
+                convertView = mInflater.inflate(R.layout.item_account, null);
                 viewHolder = new ViewHolder();
                 viewHolder.ivDelete = (ImageView) convertView.findViewById(R.id.ivDelete);
                 viewHolder.tvAccountItem = (TextView) convertView.findViewById(R.id.tvAccountItem);

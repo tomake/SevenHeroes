@@ -6,10 +6,8 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.sevenheroes.R;
-import com.sevenheroes.adapter.CommonPagerAdapter;
 import com.sevenheroes.adapter.TrainingPagerAdapter;
 import com.sevenheroes.bean.Role;
 import com.viewpagerindicator.TabPageIndicator;
@@ -40,7 +38,7 @@ public class TrainingFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
                 View rootView = inflater.inflate(R.layout.fragment_training, container, false) ;
-        mViewPager = (ViewPager) rootView.findViewById(R.id.vpFloor);
+        mViewPager = (ViewPager) rootView.findViewById(R.id.vpTraining);
         mTabIndicator = (TabPageIndicator) rootView.findViewById(R.id.tabPagerIndicator);
 
         initViewPager(inflater);

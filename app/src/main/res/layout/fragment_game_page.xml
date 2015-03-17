@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:background="@drawable/topbar"
         android:padding="5dp">
 
@@ -55,8 +55,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="5dp"
-            android:src="@drawable/user1_17"/>
+            android:src="@drawable/user1_17"
+            android:layout_marginLeft="2dp"/>
 
         <ImageView
             android:id="@+id/ivCountry"
@@ -69,14 +69,14 @@
         <Button
             android:id="@+id/btnUpgrade"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:layout_below="@id/ivHeadImage"
             android:layout_marginTop="5dp"
             android:background="@drawable/btn_upgrade_selector"
             android:gravity="center"
             android:text="@string/upgrade"
             android:textColor="@color/yellow"
-            android:textSize="12sp"/>
+            android:textSize="11sp"/>
 
         <ProgressBar
             android:id="@+id/bpUpgradeProgress"
@@ -133,7 +133,7 @@
             android:text="@string/role_name"/>
 
         <TextView
-            android:id="@+id/tvLevel"
+            android:id="@+id/tvBossLevel"
             style="@style/MainTextViewStyle"
             android:layout_alignBottom="@+id/tvRoleName"
             android:layout_alignLeft="@+id/tvMoney"

@@ -19,8 +19,9 @@ import com.sevenheroes.util.Injector;
 public class CommonActivity extends FragmentActivity implements View.OnClickListener{
     private final String PAY = "充值";
     private final String GIFT = "礼包";
-    private final String FLOOR = "重楼";
+    private final String FLOOR = "勇闯重楼";
     private final String TRAINING = "修炼馆";
+    private static final String FRAGMENT_TAG = "fragment";
     @InjectView(R.id.ivBack)
     private ImageView mIvBack;
     @InjectView(R.id.ivBackLogo)
@@ -37,7 +38,7 @@ public class CommonActivity extends FragmentActivity implements View.OnClickList
     }
 
     private void initTitleBar() {
-        String title = getIntent().getStringExtra(getString(R.string.fragment));
+        String title = getIntent().getStringExtra(FRAGMENT_TAG);
         mTvTitle.setText(title);
         mIvBack.setOnClickListener(this);
         mIvBackLogo.setOnClickListener(this);
@@ -52,7 +53,9 @@ public class CommonActivity extends FragmentActivity implements View.OnClickList
     }
 
     private Fragment getFragment() {
-        String type = getIntent().getStringExtra(getString(R.string.fragment));
+        String type = getIntent().getStringExtra(FRAGMENT_TAG);
+        if(type== null)
+            return null;
         switch (type){
             case PAY:
                 return PayFragment.newInstance();

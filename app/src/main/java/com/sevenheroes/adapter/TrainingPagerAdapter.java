@@ -192,7 +192,7 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
                 viewHolder.tvLeftTime = (TextView) convertView.findViewById(R.id.tvLeftTime);
                 viewHolder.tvRoleName = (TextView) convertView.findViewById(R.id.tvRoleName);
                 viewHolder.tvRoleState = (TextView) convertView.findViewById(R.id.tvRoleState);
-                viewHolder.tvLevel = (TextView) convertView.findViewById(R.id.tvLevel);
+                viewHolder.tvLevel = (TextView) convertView.findViewById(R.id.tvBossLevel);
                 viewHolder.vItem = convertView.findViewById(R.id.rlRoleTraning);
                 convertView.setTag(viewHolder);
 

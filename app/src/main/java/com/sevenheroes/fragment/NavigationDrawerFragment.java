@@ -130,10 +130,12 @@ public class NavigationDrawerFragment extends Fragment {
             return position;
         }
 
+        @SuppressWarnings("deprecation")
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
             ImageView itemView = new ImageView(mContext);
+            itemView.setBackgroundDrawable(getResources().getDrawable(R.drawable.lv_item_selector));
             itemView.setScaleType(ImageView.ScaleType.CENTER);
             itemView.setPadding(0, 20, 0, 20);
             if (position == 0) {

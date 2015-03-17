@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">七雄DEMO</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
@@ -24,11 +23,16 @@
     <string name="select_server">请选择服务器</string>
     <string name="username">username</string>
     <string name="password">password</string>
+    <string name="fighting_record">fighting_record</string>
+    <string name="fighting_state">isFighting</string>
+    <string name="fighting_state_true">fighting</string>
+    <string name="fighting_state_false">notFighting</string>
+    <string name="fighting_floor_name">floorType</string>
 
     <!-- Role Info-->
     <string name="virtual_count">1000</string>
     <string name="upgrade">升级至2级城池</string>
-    <string name="experience">经验：%s</string>
+    <string name="experience">经验：%1$s</string>
     <string name="role_name">裘无敌</string>
     <string name="level">Lv.9</string>
 
@@ -76,6 +80,87 @@
     <string name="gain_experience">获得经验</string>
     <string name="cost_money">消耗铜币</string>
 
+    <!-- Floor -->
+    <string name="my_ranking">我的排名：无</string>
+    <string name="activity_introduce">活动介绍</string>
+    <string name="mode">模式：战略站</string>
+    <string name="times">次数：2次/天\t\t\t1次/天（消耗【鲁班令】）</string>
+    <string name="floor_rewards">奖励：丰富的武将经验，大奖神秘套装，武器，珍贵卡片</string>
+    <string name="join_activity">参加活动</string>
+    <string name="today_free_join_times">今日免费参加次数：0/2次</string>
+    <string name="tools_join_times">道具参加次数：0/1次</string>
+    <string name="my_records">我的记录：5</string>
+    <string name="enter">进入</string>
+    <string name="tools_amount">*3</string>
+
+    <!-- Floor > fighting-->
+    <string name="fight_to_floor">勇闯重楼</string>
+    <string name="soldier_type">守兵类型：弓车弓车车</string>
+    <string name="fighting_chances">挑战机会：</string>
+    <string name="my_battle_power">我方战斗力：184</string>
+    <string name="enemy_battle_power">敌方战斗力：165</string>
+    <string name="floor_level">第一层\t\t</string>
+    <string name="boss_gain_experience">获得武将经验：50</string>
+    <string name="gain_rewards">获得奖励：20</string>
+    <string name="treatment">医疗</string>
+    <string name="change_boss">换将</string>
+    <string name="auto_soldiers">自动配兵</string>
+    <string name="auto_fighting">自动挑战</string>
+    <string name="start">开始</string>
+    <string name="exit">退出</string>
+    <string name="not_used">未使用</string>
+    <string name="used">已使用</string> 
+    <string name="add_experience">增加经验</string>
+    <string name="add_recovery">增加恢复率</string>
+
+    <string name="houyuan_package">后援补给包</string>
+    <string name="houyuan_box">后援补给箱</string>
+
+
+    <string name="level_boss">11</string>
+    <string name="health">健康</string>
+    <string name="soldier_foot">1阶步兵</string>
+    <string name="soldier_amount">120</string>
+    <string name="got_experience">成功获得25经验</string>
+
+    <string name="exit_tips">退出将会消耗一次进入重楼次数，是否确认？</string>
+    <string name="add_experience_tips">是否花费5元宝增加50%的重楼经验？</string>
+    <string name="treatment_result">全部医疗成功！</string>
+    <string name="challenge_begin">操作成功！现在挑战中！</string>
+    <string name="operate_successful">操作成功！</string>
+    <string name="battle_not_end">战斗未结束</string>
+    <string name="left_time">剩余时间：%1$s分%2$s秒</string>
+    <string name="floor_input_amount_tips">层数必须大于0</string>
+    <string name="init_level">1</string>
+    <string name="fighting_result">完胜</string>
+
+    <string name="auto_help_tips">自动补充(补充顺序按出征顺序补充)</string>
+    <string name="auto_treat_boss">自动医疗手上武将(健康度低于80时)</string>
+    <string name="auto_fit_soldier">自动补充兵力(补到初始兵力)</string>
+    <string name="fight_to">打到</string>
+    <string name="level_stop">层时自动停止</string>
+    <string name="auto_help_warning">注：失败时会自动停止，若某个武将武力补充后仍为0，则该武将不能继续参战。</string>
+    <string name="auto_stop">自动停止</string>
+
+    <string name="select_leader">选择武将</string>
+    <string name="order">顺序</string>
+    <string name="leader_name">武将名</string>
+    <string name="health_value">健康度</string>
+    <string name="job">职业</string>
+    <string name="label_level">等级</string>
+    <string name="take_soldier_type">统兵</string>
+    <string name="take_soldier_amount">统兵数量</string>
+    <string name="leader_state">状态</string>
+    <string name="default_job">部将</string>
+    <string name="default_amount">100</string>
+    <string name="default_state">空闲</string>
+    <string name="default_order">1</string>
+
+    <string name="auto_select">自动选择</string>
+    <string name="auto_select_tips">提示：武将出征顺序和序号有关，合理安排出征顺序可获得意想不到的收获</string>
+    <string name="choose_result_tag">chooseResult</string>
+
+    <string name="thousand_floor">千重楼</string>
 
     <!-- Button -->
     <string name="all_selected">全部选中</string>
@@ -88,4 +173,7 @@
 
     <!-- Tips -->
     <string name="training_tips">每次领悟最长时间为10小时，消耗一定量的铜币\n2.领悟可以获得一定数量的领悟性，悟性达到一定数量会自动兑换0.1的成长</string>
+    <string name="title_activity_floor_fighting">FloorFightingActivity</string>
+    <string name="tips">提示</string>
+    <string name="title_activity_choose_leader">ChooseLeaderActivity</string>
 </resources>

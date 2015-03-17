@@ -1,13 +1,48 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.sevenheroes.fragment.FloorFragment">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:background="@color/content_deep_bg">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RadioGroup
+        android:id="@+id/rgFloor"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/floor"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbThousandFloor"
+            android:checked="false"
+            android:layout_weight="1"
+            android:background="@drawable/rb_floor_thousand_selector"
+            android:button="@null"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbCloudFloor"
+            android:layout_weight="1"
+            android:background="@drawable/rb_floor_cloud_selector"
+            android:button="@null"
+            android:checked="false"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbUndergroundFloor"
+            android:checked="false"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:button="@null"
+            android:background="@drawable/rb_floor_underground_selector"/>
+    </RadioGroup>
+<android.support.v4.view.ViewPager
+    android:id="@+id/vpFloor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>
