@@ -1,30 +1,17 @@
 package com.sevenheroes.fragment;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
 
 import com.sevenheroes.R;
-import com.sevenheroes.util.DataUtil;
-import com.sevenheroes.util.ViewUtil;
+import com.sevenheroes.adapter.FloorPagerAdapter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class FloorFragment extends Fragment implements ViewPager.OnPageChangeListener ,View.OnClickListener{
@@ -110,7 +97,7 @@ public class FloorFragment extends Fragment implements ViewPager.OnPageChangeLis
     }
 
 
-    class FloorPagerAdapter extends PagerAdapter {
+    /*class FloorPagerAdapter extends PagerAdapter {
         private List<View> mViews;
         private ListView mLvRanking;
         private LinearLayout mLlRanking;
@@ -217,6 +204,6 @@ public class FloorFragment extends Fragment implements ViewPager.OnPageChangeLis
 
         }
     }
-
+*/
 
 }

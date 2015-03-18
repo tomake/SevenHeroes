@@ -1,8 +1,5 @@
 package com.sevenheroes.bean;
 
-import android.os.Parcelable;
-import android.support.v4.os.ParcelableCompat;
-
 /**
  * Created by forest on 2015/3/15.
  */

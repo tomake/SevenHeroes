@@ -22,7 +22,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnSelectAll"
+            android:id="@+id/btnTrainingAll"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_marginRight="10dp"
@@ -32,28 +32,28 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnCancelAll"
-            android:layout_alignTop="@+id/btnSelectAll"
-            android:layout_toRightOf="@+id/btnSelectAll"
-            android:layout_toEndOf="@+id/btnSelectAll"
+            android:id="@+id/btnCancelAllTraining"
+            android:layout_alignTop="@+id/btnTrainingAll"
+            android:layout_toRightOf="@+id/btnTrainingAll"
+            android:layout_toEndOf="@+id/btnTrainingAll"
             android:text="@string/all_cancel"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnNormalTraining"
-            android:layout_below="@+id/btnSelectAll"
-            android:layout_alignLeft="@+id/btnSelectAll"
-            android:layout_alignStart="@+id/btnSelectAll"
+            android:layout_below="@+id/btnTrainingAll"
+            android:layout_alignLeft="@+id/btnTrainingAll"
+            android:layout_alignStart="@+id/btnTrainingAll"
             android:text="@string/normal_training"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnAdvanceTraining"
+            android:id="@+id/btnAdvancedTraining"
             android:layout_alignTop="@+id/btnNormalTraining"
-            android:layout_alignLeft="@+id/btnCancelAll"
-            android:layout_alignStart="@+id/btnCancelAll"
+            android:layout_alignLeft="@+id/btnCancelAllTraining"
+            android:layout_alignStart="@+id/btnCancelAllTraining"
             android:text="@string/advance_training"/>
 
         <Button
@@ -61,20 +61,9 @@
             android:layout_height="wrap_content"
             android:text="@string/stop_training"
             android:id="@+id/btnStopTraining"
-            android:layout_above="@+id/btnAdvanceTraining"
+            android:layout_above="@+id/btnAdvancedTraining"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/training_tips"
-            android:id="@+id/tvTrainingTips"
-            android:layout_alignTop="@+id/btnCancelAll"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:visibility="gone"
-            android:textColor="@color/white"
-            android:textSize="10dp"/>
     </RelativeLayout>
 </LinearLayout>

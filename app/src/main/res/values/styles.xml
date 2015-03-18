@@ -69,7 +69,7 @@
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
 
-    <style name="StyledIndicators" parent="android:Theme.NoTitleBar" tools:ignore="NewApi">
+    <style name="StyledIndicators" parent="android:Theme.Holo" tools:ignore="NewApi">
         <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
         <item name="android:buttonStyle">@style/CommonButtonStyle</item>
     </style>

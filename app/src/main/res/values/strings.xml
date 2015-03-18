@@ -53,7 +53,7 @@
     <string name="task">任务</string>
     <string name="bar">酒馆</string>
     <string name="hospital">医馆</string>
-
+    <string name="resource_not_enough">繁荣度没有达到扩张要求</string>
     <string name="pay">充值</string>
 
     <!-- Fragment Info-->
@@ -64,7 +64,7 @@
 
     <!-- App Info -->
     <string name="version">当前版本：3.0.0</string>
-    <string name="copyright">Copyright 2011-2014 Tencent.\nAll Rights Reversed.</string>
+    <string name="copyright">Copyright 2011–2014 Tencent.\nAll Rights Reversed.</string>
     <string name="confirm">确定</string>
     <string name="title_activity_common">CommonActivity</string>
 
@@ -79,6 +79,9 @@
     <string name="boos_name">武将名称</string>
     <string name="gain_experience">获得经验</string>
     <string name="cost_money">消耗铜币</string>
+    <string name="training_tips">1、每次领悟最长时间为10小时，消耗一定量的铜币\n\n2.领悟可以获得一定数量的领悟性，悟性达到一定数量会自动兑换0.1的成长</string>
+    <string name="ling_wu">领悟</string>
+    <string name="stop">停止</string>
 
     <!-- Floor -->
     <string name="my_ranking">我的排名：无</string>
@@ -99,7 +102,7 @@
     <string name="fighting_chances">挑战机会：</string>
     <string name="my_battle_power">我方战斗力：184</string>
     <string name="enemy_battle_power">敌方战斗力：165</string>
-    <string name="floor_level">第一层\t\t</string>
+    <string name="floor_level">第1层\t\t</string>
     <string name="boss_gain_experience">获得武将经验：50</string>
     <string name="gain_rewards">获得奖励：20</string>
     <string name="treatment">医疗</string>
@@ -172,8 +175,10 @@
     <string name="change">更改</string>
 
     <!-- Tips -->
-    <string name="training_tips">每次领悟最长时间为10小时，消耗一定量的铜币\n2.领悟可以获得一定数量的领悟性，悟性达到一定数量会自动兑换0.1的成长</string>
     <string name="title_activity_floor_fighting">FloorFightingActivity</string>
     <string name="tips">提示</string>
     <string name="title_activity_choose_leader">ChooseLeaderActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

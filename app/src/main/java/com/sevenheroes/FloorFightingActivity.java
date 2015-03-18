@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.SpannableString;
 import android.view.View;
 import android.view.Window;
@@ -49,7 +48,7 @@ public class FloorFightingActivity extends Activity implements View.OnClickListe
     @InjectView(R.id.btnExit)
     private Button mBtnExit;
     @InjectView(R.id.ratingBarChanllengeTimes)
-    private RatingBar mRatingBatTimes;
+    private RatingBar mRatingBarTimes;
     @InjectView(R.id.tvLeftTime)
     private TextView mTvLeftTime;
     @InjectView(R.id.tvGainBossExperience)

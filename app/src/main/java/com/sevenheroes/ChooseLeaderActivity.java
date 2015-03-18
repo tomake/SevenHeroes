@@ -2,10 +2,7 @@ package com.sevenheroes;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -20,7 +17,6 @@ import android.widget.TextView;
 import com.sevenheroes.bean.Role;
 import com.sevenheroes.util.InjectView;
 import com.sevenheroes.util.Injector;
-import com.sevenheroes.util.ViewUtil;
 
 import java.util.ArrayList;
 

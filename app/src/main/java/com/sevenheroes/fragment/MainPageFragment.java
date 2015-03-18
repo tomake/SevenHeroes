@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class MainPageFragment extends Fragment implements View.OnClickListener {
     private ImageButton mIbTraining;
     private ImageButton mIbPay;
     private TextView mTvExperience ;
+    private Button mBtnUpgrade;
 
     public MainPageFragment() {
     }
@@ -45,11 +47,9 @@ public class MainPageFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         mFunctionIntent = new Intent(ACTION_COMMON_ACTIVITY);
         View rootView = inflater.inflate(R.layout.fragment_game_page, container, false);
         initViews(rootView);
-
         return rootView;
     }
 
@@ -64,7 +64,8 @@ public class MainPageFragment extends Fragment implements View.OnClickListener {
         mIbFloor.setOnClickListener(this);
         mIbTraining = (ImageButton) rootView.findViewById(R.id.ibTraining);
         mIbTraining.setOnClickListener(this);
-
+        mBtnUpgrade = (Button) rootView.findViewById(R.id.btnUpgrade);
+        mBtnUpgrade.setOnClickListener(this);
         mTvExperience = (TextView) rootView.findViewById(R.id.tvExperience);
         String text = getString(R.string.experience , "126/1000");
         mTvExperience.setText(ViewUtil.getSpannableString(text ,R.color.yellow ,0 ,3));
@@ -74,15 +75,18 @@ public class MainPageFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.ibDrawerToggle:
-                if (mDrawerFragment.isDrawerOpen()) {
+               /* if (mDrawerFragment.isDrawerOpen()) {
                     mDrawerFragment.openDrawer(false);
                 } else {
                     mDrawerFragment.openDrawer(true);
-                }
+                }*/
                 break;
             case R.id.ibPay:
                 mFunctionIntent.putExtra(FRAGMENT_TAG, getString(R.string.pay));
                 startActivity(mFunctionIntent);
+                break;
+            case R.id.btnUpgrade:
+                ViewUtil.toastInCenter(getString(R.string.resource_not_enough));
                 break;
             case R.id.ibGift:
                 mFunctionIntent.putExtra(FRAGMENT_TAG, getString(R.string.gift));
