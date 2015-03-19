@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-<view
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    class="com.actionbarsherlock.internal.widget.ScrollingTabContainerView$TabView"
-    style="?attr/actionBarTabStyle"
-/><!-- From: file:/C:/Users/forest/Desktop/other/sevenheroes/extra_lib/actionbarsherlock/res/layout/abs__action_bar_tab.xml --><!-- From: file:/C:/Users/forest/Desktop/other/sevenheroes/extra_lib/SlidingMenu/build/intermediates/exploded-aar/sevenheroes/actionbarsherlock/unspecified/res/layout/abs__action_bar_tab.xml -->

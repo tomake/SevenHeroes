@@ -1,4 +1,4 @@
-include ':app', 'actionbarsherlock', ':actionbarsherlock', ':ViewPagerIndicator', ':SlidingMenu'
+include ':app', 'actionbarsherlock', ':actionbarsherlock', ':SlidingMenu', ':ViewPagerIndicator'
 project(':actionbarsherlock').projectDir = new File('extra_lib/actionbarsherlock')
-project(':ViewPagerIndicator').projectDir = new File('extra_lib/ViewPagerIndicator')
 project(':SlidingMenu').projectDir = new File('extra_lib/SlidingMenu')
+project(':ViewPagerIndicator').projectDir = new File('extra_lib/ViewPagerIndicator')
