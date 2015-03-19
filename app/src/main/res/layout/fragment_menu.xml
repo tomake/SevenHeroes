@@ -6,5 +6,6 @@
              android:divider="@color/drawer_listview_divider"
              android:dividerHeight="1dp"
              android:background="@color/content_deep_bg"
+             android:footerDividersEnabled="true"
              tools:context="com.sevenheroes.fragment.MenuFragment">
 </ListView>
