@@ -8,4 +8,8 @@
     <color name="white">#FFFFFF</color>
     <color name="gray">#BCBCBC</color>
     <color name="green">#00FF00</color>
+    <color name="dark_green">#233638</color>
+    <color name="transparent_grey">#885E5E5E</color>
+    <color name="red">#FF0000</color>
+    <color name="drawer_selector_bg">#0B95C3</color>
 </resources>

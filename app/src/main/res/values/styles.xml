@@ -69,7 +69,7 @@
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
 
-    <style name="StyledIndicators" parent="android:Theme.NoTitleBar" tools:ignore="NewApi">
+    <style name="StyledIndicators" parent="android:Theme.Holo" tools:ignore="NewApi">
         <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
         <item name="android:buttonStyle">@style/CommonButtonStyle</item>
     </style>
@@ -83,6 +83,10 @@
         <item name="android:layout_width">100dp</item>
     </style>
 
-
+    <style name="RatingBarStyle" parent="android:Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_style_bg</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:minWidth">20dp</item>
+    </style>
 
 </resources>

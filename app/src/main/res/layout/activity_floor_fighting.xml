@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/content_bg"
+              android:weightSum="1">
+<include layout="@layout/layout_common_title"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:background="@color/black">
+
+        <TextView
+            android:text="@string/floor_level"
+            android:id="@+id/tvFloorLevel"
+            style="@style/MainTextViewStyle"
+            android:textSize="10sp"
+            />
+
+        <TextView
+            style="@style/MainTextViewStyle"
+            android:text="@string/soldier_type"
+            android:id="@+id/tvSoldierType"
+            android:textSize="10sp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:padding="5dp">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_battle_power"
+        android:id="@+id/tvMyPower"
+        android:drawableTop="@drawable/challenge_man"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        style="@style/MainTextViewStyle"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enemy_battle_power"
+            android:drawableTop="@drawable/challenge_man_2"
+            android:id="@+id/tvEnemyPower"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            style="@style/MainTextViewStyle"/>
+
+        <TextView
+            style="@style/MainTextViewStyle"
+            android:text="@string/fighting_chances"
+            android:id="@+id/tvChallengeChance"
+            android:textSize="10sp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvMyPower"
+           android:layout_marginTop="10dp"/>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RatingBarStyle"
+            android:id="@+id/ratingBarChanllengeTimes"
+            android:numStars="3"
+            android:rating="2"
+            android:isIndicator="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvChallengeChance"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivFightKnife"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/fight_knife"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:id="@+id/tvLeftTime"
+            android:visibility="gone"
+            android:layout_below="@+id/tvChallengeChance"
+            android:layout_alignLeft="@+id/tvChallengeChance"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="@string/floor_level"
+        android:id="@+id/tvLevelChallengeResult"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/content_deep_bg"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            style="@style/CommonButtonStyle"
+            android:text="@string/add_experience"
+            android:id="@+id/btnAddExperience"/>
+
+        <TextView
+            android:text="@string/not_used"
+            android:id="@+id/tvAddExperienceState"
+            android:layout_gravity="bottom"
+            style="@style/MainTextViewStyle"
+            android:textColor="@color/green"
+            android:textSize="10sp"/>
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            style="@style/CommonButtonStyle"
+            android:text="@string/add_recovery"
+            android:id="@+id/btnAddRecovery"
+            android:layout_marginLeft="80dp"/>
+
+        <TextView
+            android:text="@string/not_used"
+            android:id="@+id/tvAddRecoveryState"
+            android:layout_gravity="bottom"
+            style="@style/MainTextViewStyle"
+            android:textColor="@color/green"
+            android:textSize="10sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/MainTextViewStyle"
+        android:textSize="10sp"
+        android:text="@string/boss_gain_experience"
+        android:id="@+id/tvGainBossExperience"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        style="@style/MainTextViewStyle"
+        android:textSize="10sp"
+        android:text="@string/gain_rewards"
+        android:id="@+id/tvGainRewards"
+        android:layout_marginLeft="20dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:padding="10dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:id="@+id/llBosses"
+        >
+        <include layout="@layout/item_challenge_role"
+         android:layout_width="0dip"
+         android:layout_height="match_parent"
+         android:layout_weight="1"
+         android:id="@+id/vBoos1"
+            />
+        <include layout="@layout/item_challenge_role"
+                 android:layout_width="0dip"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:id="@+id/vBoss2"
+                 android:visibility="invisible"
+            />
+        <include layout="@layout/item_challenge_role"
+                 android:layout_width="0dip"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:id="@+id/vBoss3"
+                 android:visibility="invisible"
+            />
+        <include layout="@layout/item_challenge_role"
+                 android:layout_width="0dip"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:id="@+id/vBoss4"
+                 android:visibility="invisible"
+            />
+        <include layout="@layout/item_challenge_role"
+                 android:layout_width="0dip"
+                 android:layout_height="match_parent"
+                 android:layout_weight="1"
+                 android:id="@+id/vBoss5"
+                 android:visibility="invisible"
+            />
+
+    </LinearLayout>
+</FrameLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="@string/treatment"
+            android:id="@+id/btnTreatment"
+            android:ems="1"
+            style="@style/CommonButtonStyle"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="@string/change_boss"
+            android:id="@+id/btnChangeBoss"
+            android:ems="1"
+            style="@style/CommonButtonStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/auto_soldiers"
+            android:ems="1"
+            android:id="@+id/btnAutoSoldier"
+            style="@style/CommonButtonStyle"
+            android:textSize="12sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_challenge_selector"
+            android:id="@+id/btnChallenge"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_fighting"
+                android:id="@+id/btnAutoChallenge"
+                style="@style/CommonButtonStyle"/>
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/exit"
+                android:id="@+id/btnExit"
+                style="@style/CommonButtonStyle"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

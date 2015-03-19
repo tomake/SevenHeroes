@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/content_deep_bg"
+                tools:context="com.sevenheroes.ChooseLeaderActivity">
+<include layout="@layout/layout_common_title"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:background="@drawable/dialog_bg"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/yellow"
+            android:text="@string/order"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/dialog_bg"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/yellow"
+            android:text="@string/leader_name"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/dialog_bg"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/yellow"
+            android:text="@string/health_value"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/dialog_bg"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/yellow"
+            android:text="@string/job"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_bg"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/yellow"
+            android:text="@string/label_level"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:background="@drawable/dialog_bg"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/yellow"
+            android:text="@string/take_soldier_type"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_bg"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/yellow"
+            android:text="@string/take_soldier_amount"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_bg"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:textColor="@color/yellow"
+            android:text="@string/leader_state"
+            />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvChooseLeader"
+        android:layout_weight="1"
+        android:divider="@color/content_bg"
+        android:dividerHeight="1dp"
+        android:listSelector="@null"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        android:background="@color/content_bg"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CommonButtonStyle"
+
+            android:text="@string/auto_select"
+            android:id="@+id/btnAutoSelect"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CommonButtonStyle"
+
+            android:text="@string/all_cancel"
+            android:id="@+id/btnCancelAll"
+            android:layout_below="@+id/btnAutoSelect"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="40dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CommonButtonStyle"
+
+            android:text="@string/sure"
+            android:id="@+id/btnSure"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignTop="@+id/btnCancelAll"
+            android:layout_toRightOf="@+id/btnCancelAll"
+            android:layout_toEndOf="@+id/btnCancelAll"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CommonButtonStyle"
+            android:text="@string/cancel"
+            android:id="@+id/btnCancel"
+            android:layout_alignTop="@+id/btnSure"
+            android:layout_toRightOf="@+id/btnSure"
+            android:layout_toEndOf="@+id/btnSure"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auto_select_tips"
+            android:layout_alignBottom="@+id/btnAutoSelect"
+            android:layout_toRightOf="@+id/btnAutoSelect"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/yellow"
+            android:textSize="10sp"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

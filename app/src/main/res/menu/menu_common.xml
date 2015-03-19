@@ -4,6 +4,6 @@
       tools:context="com.sevenheroes.CommonActivity">
 
     <item android:title="@string/action_settings"
-        app:showAsAction="never">
+          android:showAsAction="never">
         </item>
 </menu>

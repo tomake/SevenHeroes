@@ -4,12 +4,13 @@
               android:layout_height="match_parent"
               android:background="@color/content_bg"
               android:orientation="vertical"
-              tools:context="com.sevenheroes.fragment.MainPageFragment">
+              tools:context="com.sevenheroes.fragment.MainPageFragment"
+              tools:ignore="contentDescription">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:background="@drawable/topbar"
         android:padding="5dp">
 
@@ -55,8 +56,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="5dp"
-            android:src="@drawable/user1_17"/>
+            android:src="@drawable/user1_17"
+            />
 
         <ImageView
             android:id="@+id/ivCountry"
@@ -69,14 +70,16 @@
         <Button
             android:id="@+id/btnUpgrade"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:layout_below="@id/ivHeadImage"
             android:layout_marginTop="5dp"
             android:background="@drawable/btn_upgrade_selector"
             android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:text="@string/upgrade"
             android:textColor="@color/yellow"
-            android:textSize="12sp"/>
+            android:textSize="11sp"/>
 
         <ProgressBar
             android:id="@+id/bpUpgradeProgress"
@@ -90,10 +93,10 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/btnUpgrade"
             android:background="@drawable/progress_bg"
-            android:progressDrawable="@drawable/horizontal_progress_bg"
+            android:indeterminate="false"
             android:max="100"
             android:progress="60"
-            android:indeterminate="false"/>
+            android:progressDrawable="@drawable/horizontal_progress_bg"/>
 
         <TextView
             android:id="@+id/tvTicket"
@@ -133,7 +136,7 @@
             android:text="@string/role_name"/>
 
         <TextView
-            android:id="@+id/tvLevel"
+            android:id="@+id/tvBossLevel"
             style="@style/MainTextViewStyle"
             android:layout_alignBottom="@+id/tvRoleName"
             android:layout_alignLeft="@+id/tvMoney"
@@ -197,11 +200,11 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:paddingTop="10dp">
+        android:paddingTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             >
 
@@ -216,10 +219,11 @@
 
                 <!-- Gift -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibGift"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_gift_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvGift"
                     style="@style/FunctionTextViewStyle"
@@ -229,10 +233,11 @@
 
                 <!-- PVP -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibPVP"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_pvp_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvPVP"
                     style="@style/FunctionTextViewStyle"
@@ -241,10 +246,11 @@
 
                 <!-- Fighting -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibFighting"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_fighting_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvFighting"
                     style="@style/FunctionTextViewStyle"
@@ -253,10 +259,11 @@
 
                 <!-- Farm -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibFarm"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_farm_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvFarm"
                     style="@style/FunctionTextViewStyle"
@@ -265,10 +272,11 @@
 
                 <!-- School -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibSchool"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_school_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvSchool"
                     style="@style/FunctionTextViewStyle"
@@ -277,10 +285,11 @@
 
                 <!-- Hospital -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibHospital"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_hospital_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvHospital"
                     style="@style/FunctionTextViewStyle"
@@ -300,10 +309,11 @@
 
                 <!-- Floor -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibFloor"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_floor_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvFloor"
                     style="@style/FunctionTextViewStyle"
@@ -312,10 +322,11 @@
 
                 <!-- PVE -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibPVE"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_pve_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvPVE"
                     style="@style/FunctionTextViewStyle"
@@ -324,10 +335,11 @@
 
                 <!-- Union -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibUnion"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_union_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvUnion"
                     style="@style/FunctionTextViewStyle"
@@ -336,10 +348,11 @@
 
                 <!-- Camp -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibCamp"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_camp_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvCamp"
                     style="@style/FunctionTextViewStyle"
@@ -348,10 +361,11 @@
 
                 <!--  Task -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibTask"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_task_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvTask"
                     style="@style/FunctionTextViewStyle"
@@ -371,10 +385,11 @@
 
                 <!-- Training -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibTraining"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_training_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvTraining"
                     style="@style/FunctionTextViewStyle"
@@ -383,10 +398,11 @@
 
                 <!-- Government -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibGovern"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_govern_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvGovern"
                     style="@style/FunctionTextViewStyle"
@@ -395,10 +411,11 @@
 
                 <!-- Soldier -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibSoldier"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_soldier_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvSoldier"
                     style="@style/FunctionTextViewStyle"
@@ -407,10 +424,11 @@
 
                 <!-- BuildingManagement-->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibBuildingManagement"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_building_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvBuilding"
                     style="@style/FunctionTextViewStyle"
@@ -419,10 +437,11 @@
 
                 <!-- Bar -->
                 <ImageButton
-                    style="@style/ImageButtonStyle"
                     android:id="@+id/ibBar"
+                    style="@style/ImageButtonStyle"
                     android:src="@drawable/btn_bar_selector"
                     />
+
                 <TextView
                     android:id="@+id/tvBar"
                     style="@style/FunctionTextViewStyle"

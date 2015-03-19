@@ -1,7 +1,5 @@
 package com.sevenheroes.fragment;
 
-import android.app.Activity;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -67,7 +65,7 @@ public class GiftFragment extends Fragment {
         public View getView(int position, View convertView, ViewGroup parent) {
             final ViewHolder viewHolder ;
             if(convertView == null){
-                convertView = getActivity().getLayoutInflater().inflate(R.layout.gift_item_layout ,null);
+                convertView = getActivity().getLayoutInflater().inflate(R.layout.item_gift,null);
                 viewHolder = new ViewHolder();
                 viewHolder.ivGift = (ImageView) convertView.findViewById(R.id.ivGift);
                 viewHolder.tvGetGift = (TextView) convertView.findViewById(R.id.tvGetGift);

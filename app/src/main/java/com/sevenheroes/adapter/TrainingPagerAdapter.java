@@ -1,6 +1,7 @@
 package com.sevenheroes.adapter;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,9 +33,12 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
     private Button mBtnNormalTraining;
     private Button mBtnAdvanceTraining;
     private Button mBtnStopTraining;
+    private Button mBtnLingwu;
+    private Button mBtnStop;
+    private Button mBtnTrainingAll;
+    private Button mBtnCancelAllTraining;
 
     private TrainingAdapter mTrainingAdapter;
-    private TrainingAdapter mWujiangAdapter;
     private TrainingAdapter mLingwuAdapter;
 
     public TrainingPagerAdapter(Context context, ArrayList<View> views, ArrayList<Role> roles) {
@@ -47,8 +51,6 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
         mViews = views;
         mRoles = roles;
 
-        mWujiangAdapter = new TrainingAdapter();
-        mLingwuAdapter = new TrainingAdapter();
     }
 
     @Override
@@ -65,28 +67,33 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
     public Object instantiateItem(ViewGroup container, int position) {
         container.addView(mViews.get(position));
         View v = mViews.get(position);
-
-        mBtnSelectAll = (Button) v.findViewById(R.id.btnSelectAll);
-        mBtnSelectAll.setOnClickListener(this);
-        mBtnCancelAll = (Button) v.findViewById(R.id.btnCancelAll);
-        mBtnCancelAll.setOnClickListener(this);
-        mBtnNormalTraining = (Button) v.findViewById(R.id.btnNormalTraining);
-        mBtnNormalTraining.setOnClickListener(this);
-        mBtnAdvanceTraining = (Button) v.findViewById(R.id.btnAdvanceTraining);
-        mBtnAdvanceTraining.setOnClickListener(this);
-        mBtnStopTraining = (Button) v.findViewById(R.id.btnStopTraining);
-        mBtnStopTraining.setOnClickListener(this);
-
-        ListView lvTraining = (ListView) v.findViewById(R.id.lvTraining);
         if (position == 0) {
-            mTrainingAdapter = mWujiangAdapter;
-            lvTraining.setAdapter(mWujiangAdapter);
+            mBtnCancelAllTraining = (Button) v.findViewById(R.id.btnCancelAllTraining);
+            mBtnCancelAllTraining.setOnClickListener(this);
+            mBtnTrainingAll = (Button) v.findViewById(R.id.btnTrainingAll);
+            mBtnTrainingAll.setOnClickListener(this);
+            mBtnNormalTraining = (Button) v.findViewById(R.id.btnNormalTraining);
+            mBtnNormalTraining.setOnClickListener(this);
+            mBtnAdvanceTraining = (Button) v.findViewById(R.id.btnAdvancedTraining);
+            mBtnAdvanceTraining.setOnClickListener(this);
+            mBtnStopTraining = (Button) v.findViewById(R.id.btnStopTraining);
+            mBtnStopTraining.setOnClickListener(this);
+            ListView lvTraining = (ListView) v.findViewById(R.id.lvTraining);
+            mTrainingAdapter = new TrainingAdapter();
+            lvTraining.setAdapter(mTrainingAdapter);
         } else if (position == 1) {
-            mTrainingAdapter = mLingwuAdapter;
+            mBtnSelectAll = (Button) v.findViewById(R.id.btnSelectAll);
+            mBtnSelectAll.setOnClickListener(this);
+            mBtnCancelAll = (Button) v.findViewById(R.id.btnCancelAll);
+            mBtnCancelAll.setOnClickListener(this);
+            mBtnLingwu = (Button) v.findViewById(R.id.btnLingWu);
+            mBtnLingwu.setOnClickListener(this);
+            mBtnStop = (Button) v.findViewById(R.id.btnStopLingWu);
+            mBtnStop.setOnClickListener(this);
+            ListView lvTraining = (ListView) v.findViewById(R.id.lvLingWu);
+            mLingwuAdapter = new TrainingAdapter();
             lvTraining.setAdapter(mLingwuAdapter);
-
         }
-
         return v;
     }
 
@@ -107,31 +114,50 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnSelectAll:
-                selectAllRoles(true);
+                selectAllRoles(mLingwuAdapter ,true);
                 break;
             case R.id.btnCancelAll:
-                selectAllRoles(false);
+                selectAllRoles(mLingwuAdapter ,false);
+                break;
+            case R.id.btnLingWu:
+                mLingwuAdapter.startTraining();
+                ViewUtil.toastInCenter(mContext.getString(R.string.operate_successful));
+                break;
+            case R.id.btnStopLingWu:
+                selectAllRoles(mLingwuAdapter ,false);
+                mLingwuAdapter.stopTraining();
+                ViewUtil.toastInCenter(mContext.getString(R.string.operate_successful));
+                break;
+
+            case R.id.btnTrainingAll:
+                selectAllRoles(mTrainingAdapter ,true);
+                break;
+            case R.id.btnCancelAllTraining:
+                selectAllRoles(mTrainingAdapter ,false);
+                break;
+            case R.id.btnAdvancedTraining:
+                openAdvancedTrainingDialog(true);
                 break;
             case R.id.btnNormalTraining:
-                openAdvancedTrainingDialog(false); //showTrainingDialog(false);
+                openAdvancedTrainingDialog(false);
                 break;
-            case R.id.btnAdvanceTraining:
-                openAdvancedTrainingDialog(true);  //showTrainingDialog(true);
-                break;
+
             case R.id.btnStopTraining:
-                selectAllRoles(false);
+                selectAllRoles(mTrainingAdapter,false);
+                mTrainingAdapter.stopTraining();
+                ViewUtil.toastInCenter(mContext.getString(R.string.operate_successful));
                 break;
 
         }
     }
 
-    private void openAdvancedTrainingDialog(boolean isAdvanced){
+    private void openAdvancedTrainingDialog(boolean isAdvanced) {
         TrainingDialog trainingDialog = new TrainingDialog(mContext);
         trainingDialog.setTrainingTypeAdvanced(isAdvanced);
         trainingDialog.setOnTrainingSelectedListener(new TrainingDialog.OnTrainingSelectedListener() {
             @Override
             public void onSureClick(int result) {
-                ViewUtil.toast(result+"");
+                mTrainingAdapter.startTraining();
             }
 
             @Override
@@ -142,9 +168,9 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
         trainingDialog.show();
     }
 
-    private void selectAllRoles(boolean b) {
-        if (mTrainingAdapter != null) {
-            mTrainingAdapter.selectAllItem(b);
+    private void selectAllRoles(TrainingAdapter adapter, boolean b) {
+        if (adapter != null) {
+            adapter.selectAllItem(b);
             notifyDataSetChanged();
         }
     }
@@ -162,6 +188,7 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
     public class TrainingAdapter extends BaseAdapter {
 
         private boolean isRoleSelect = false;
+        private boolean isTimingOn = false ;
 
         public TrainingAdapter() {
         }
@@ -192,7 +219,7 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
                 viewHolder.tvLeftTime = (TextView) convertView.findViewById(R.id.tvLeftTime);
                 viewHolder.tvRoleName = (TextView) convertView.findViewById(R.id.tvRoleName);
                 viewHolder.tvRoleState = (TextView) convertView.findViewById(R.id.tvRoleState);
-                viewHolder.tvLevel = (TextView) convertView.findViewById(R.id.tvLevel);
+                viewHolder.tvLevel = (TextView) convertView.findViewById(R.id.tvBossLevel);
                 viewHolder.vItem = convertView.findViewById(R.id.rlRoleTraning);
                 convertView.setTag(viewHolder);
 
@@ -201,9 +228,9 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
 
             }
             Role role = mRoles.get(position);
-            viewHolder.cbTraining.setChecked(isRoleSelect);
+
             viewHolder.tvExperience.setText(role.getExperience());
-            viewHolder.tvLeftTime.setText("剩余时间：00分00秒");
+            viewHolder.tvLeftTime.setText(mContext.getString(R.string.left_time, "00", "00"));
             viewHolder.tvRoleState.setText(role.getState());
             viewHolder.tvRoleName.setText(role.getName());
             viewHolder.tvLevel.setText(role.getLevel());
@@ -214,6 +241,11 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
                     viewHolder.cbTraining.setChecked(checked);
                 }
             });
+            if(isTimingOn){
+                if(viewHolder.cbTraining.isChecked())
+                    startTiming(viewHolder.tvLeftTime , 30*60);
+            }
+                viewHolder.cbTraining.setChecked(isRoleSelect);
             return convertView;
         }
 
@@ -221,5 +253,49 @@ public class TrainingPagerAdapter extends PagerAdapter implements View.OnClickLi
             isRoleSelect = b;
             notifyDataSetChanged();
         }
+
+        public void startTraining(){
+            isTimingOn = true ;
+            notifyDataSetChanged();
+        }
+
+        public void stopTraining(){
+            isTimingOn = false ;
+        }
+
+        private void startTiming(final TextView view , int seconds) {
+            final AsyncTask<Integer, Integer, Void> task = new AsyncTask<Integer, Integer, Void>() {
+
+                @Override
+                protected Void doInBackground(Integer... params) {
+                    long oldTime = System.currentTimeMillis();
+                    while (params[0] > 0) {
+                        if(!isTimingOn){  // stop timing
+                            publishProgress(0);
+                            return null;
+                        }
+                        if (System.currentTimeMillis() - oldTime == 1000) {
+                            oldTime = System.currentTimeMillis();
+                            publishProgress(--params[0]);
+                        }
+                    }
+                    return null;  // time out
+                }
+
+                @Override
+                protected void onProgressUpdate(Integer... values) {
+                    super.onProgressUpdate(values);
+                    int minutes = values[0] / 60;
+                    String minuteText = minutes >= 10 ? (minutes + "") : ("0" + minutes);
+                    int seconds = values[0] % 60;
+                    String secondText = seconds >= 10 ? (seconds + "") : ("0" + seconds);
+                    String text = mContext.getResources().getString(R.string.left_time, minuteText, secondText);
+                    view.setText(text);
+                }
+            };
+            task.execute(seconds);
+        }
+
+
     }
 }

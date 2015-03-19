@@ -6,10 +6,8 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.sevenheroes.R;
-import com.sevenheroes.adapter.CommonPagerAdapter;
 import com.sevenheroes.adapter.TrainingPagerAdapter;
 import com.sevenheroes.bean.Role;
 import com.viewpagerindicator.TabPageIndicator;
@@ -40,7 +38,7 @@ public class TrainingFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
                 View rootView = inflater.inflate(R.layout.fragment_training, container, false) ;
-        mViewPager = (ViewPager) rootView.findViewById(R.id.vpFloor);
+        mViewPager = (ViewPager) rootView.findViewById(R.id.vpTraining);
         mTabIndicator = (TabPageIndicator) rootView.findViewById(R.id.tabPagerIndicator);
 
         initViewPager(inflater);
@@ -51,7 +49,7 @@ public class TrainingFragment extends Fragment implements View.OnClickListener{
         ArrayList<View> pagerViews = new ArrayList<>();
         View v1 = inflater.inflate(R.layout.layout_wujiang_training , null);
         pagerViews.add(v1);
-        View v2 = inflater.inflate(R.layout.layout_wujiang_training , null);
+        View v2 = inflater.inflate(R.layout.layout_wujiang_lingwu , null);
         pagerViews.add(v2);
 
         Role role1 = new Role();
@@ -59,24 +57,26 @@ public class TrainingFragment extends Fragment implements View.OnClickListener{
         role1.setExperience("已获经验：0");
         role1.setLevel("10级");
         role1.setState("空闲");
+        role1.setBeingSelected(false);
 
         Role role2 = new Role();
         role2.setName("钟玄奇");
         role2.setExperience("已获经验：230");
         role2.setLevel("15级");
-        role2.setState("忙碌");
+        role2.setState("空闲");
+        role2.setBeingSelected(false);
+
+        Role role3 = new Role();
+        role3.setName("董菲鹰");
+        role3.setExperience("已获经验：530");
+        role3.setLevel("35级");
+        role3.setState("空闲");
+        role2.setBeingSelected(false);
 
         ArrayList<Role> roles = new ArrayList<>();
         roles.add(role1);
         roles.add(role2);
-        roles.add(role1);
-        roles.add(role2);
-        roles.add(role1);
-        roles.add(role2);
-        roles.add(role1);
-        roles.add(role2);
-        roles.add(role1);
-        roles.add(role2);
+        roles.add(role3);
 
         mViewPager.setAdapter(new TrainingPagerAdapter(getActivity() , pagerViews , roles , new String[]{"武将修炼" , "武将领悟"}));
         mTabIndicator.setViewPager(mViewPager);
